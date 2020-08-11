@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryLight">#63a4ff</color>
+    <color name="colorAccent">#1976d2</color>
+
+    <color name="background">#FAFAFA</color>
+    <color name="success">#63C163</color>
+    <color name="onSuccess">#ffffff</color>
+
+    <color name="text_high">#202020</color>
+    <color name="text_medium">#505050</color>
+
+    <color name="surface">#EAEAEA</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="onSecondary">#000000</color>
+    <color name="secondary">#FFFFFF</color>
+    <color name="danger">#E53935</color>
+</resources>
