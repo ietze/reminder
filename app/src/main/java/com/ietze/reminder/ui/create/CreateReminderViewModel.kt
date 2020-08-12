@@ -3,8 +3,8 @@ package com.ietze.reminder.ui.create
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.ietze.reminder.data.Reminder
-import com.ietze.reminder.data.ReminderDataSource
+import com.ietze.reminder.data.reminder.Reminder
+import com.ietze.reminder.data.reminder.ReminderDataSource
 import com.ietze.reminder.data.Result
 import kotlinx.coroutines.launch
 import java.util.*
@@ -16,7 +16,13 @@ class CreateReminderViewModel(
 
     fun add(content: String, date: Date) {
         viewModelScope.launch {
-            val id = dataSource.add(Reminder(0, content, date))
+            val id = dataSource.add(
+                Reminder(
+                    0,
+                    content,
+                    date
+                )
+            )
             val reminder = dataSource.getById(id)
             if (reminder is Result.Success) {
                 schedule(reminder.data)

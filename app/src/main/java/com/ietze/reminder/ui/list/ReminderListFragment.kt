@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ietze.reminder.R
-import com.ietze.reminder.data.Reminder
+import com.ietze.reminder.data.reminder.Reminder
 import com.ietze.reminder.ui.create.CreateReminderFragment
 import com.ietze.reminder.ui.details.ReminderDetailsFragment
 import kotlinx.android.synthetic.main.fragment_reminder_list.view.*

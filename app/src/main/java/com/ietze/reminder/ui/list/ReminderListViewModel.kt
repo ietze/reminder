@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ietze.reminder.data.Reminder
-import com.ietze.reminder.data.ReminderDataSource
+import com.ietze.reminder.data.reminder.Reminder
+import com.ietze.reminder.data.reminder.ReminderDataSource
 import kotlinx.coroutines.launch
 import com.ietze.reminder.data.Result
 

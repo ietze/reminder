@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ietze.reminder.R
-import com.ietze.reminder.data.Reminder
+import com.ietze.reminder.data.reminder.Reminder
 import com.ietze.reminder.utils.DateTimeUtils
 import kotlinx.android.synthetic.main.item_note.view.*
 import java.text.SimpleDateFormat

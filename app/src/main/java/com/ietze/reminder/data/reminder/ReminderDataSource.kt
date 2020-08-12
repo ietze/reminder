@@ -1,4 +1,6 @@
-package com.ietze.reminder.data
+package com.ietze.reminder.data.reminder
+
+import com.ietze.reminder.data.Result
 
 interface ReminderDataSource {
 

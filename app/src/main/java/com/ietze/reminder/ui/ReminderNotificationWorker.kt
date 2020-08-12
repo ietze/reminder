@@ -8,7 +8,7 @@ import androidx.core.app.NotificationCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.ietze.reminder.R
-import com.ietze.reminder.data.ReminderDataSource
+import com.ietze.reminder.data.reminder.ReminderDataSource
 import com.ietze.reminder.utils.di.Injector
 
 class ReminderNotificationWorker(
