@@ -1,8 +1,8 @@
 package com.ietze.reminder.data
 
-sealed class Result<T> {
+sealed class Result<out T> {
 
-    data class Success<T>(val data: T): Result<T>()
+    data class Success<out T>(val data: T): Result<T>()
 
     data class Fail<E>(val error: E): Result<Nothing>() where E: Error
 }

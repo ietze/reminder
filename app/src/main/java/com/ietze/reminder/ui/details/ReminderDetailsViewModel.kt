@@ -25,4 +25,10 @@ class ReminderDetailsViewModel(
             }
         }
     }
+
+    fun deleteReminder() {
+        viewModelScope.launch {
+            dataSource.delete(reminderId)
+        }
+    }
 }

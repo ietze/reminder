@@ -10,6 +10,7 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.ietze.reminder.R
+import com.ietze.reminder.utils.requireApplication
 import kotlinx.android.synthetic.main.fragment_create_reminder.view.*
 
 class CreateReminderFragment : Fragment() {
@@ -26,7 +27,7 @@ class CreateReminderFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this, CreateReminderViewModelFactory(requireActivity().application))
+        viewModel = ViewModelProvider(this, CreateReminderViewModelFactory(requireApplication()))
             .get(CreateReminderViewModel::class.java)
     }
 

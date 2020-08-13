@@ -12,6 +12,7 @@ import com.ietze.reminder.R
 import com.ietze.reminder.data.reminder.Reminder
 import com.ietze.reminder.ui.create.CreateReminderFragment
 import com.ietze.reminder.ui.details.ReminderDetailsFragment
+import com.ietze.reminder.utils.requireApplication
 import kotlinx.android.synthetic.main.fragment_reminder_list.view.*
 import java.util.*
 
@@ -21,7 +22,7 @@ class ReminderListFragment: Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this, ReminderListViewModelFactory())
+        viewModel = ViewModelProvider(this, ReminderListViewModelFactory(requireApplication()))
             .get(ReminderListViewModel::class.java)
     }
 

@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 
 import com.ietze.reminder.R
 import com.ietze.reminder.utils.DateTimeUtils
+import com.ietze.reminder.utils.requireApplication
 import kotlinx.android.synthetic.main.reminder_details_fragment.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -34,7 +35,8 @@ class ReminderDetailsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val factory = ReminderDetailsViewModelFactory(
-            requireArguments().getLong(ARG_REMINDER_ID)
+            requireArguments().getLong(ARG_REMINDER_ID),
+            requireApplication()
         )
         viewModel = ViewModelProvider(this, factory).get(ReminderDetailsViewModel::class.java)
     }
@@ -50,6 +52,11 @@ class ReminderDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.back.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+
+        view.delete.setOnClickListener {
+            viewModel.deleteReminder()
             parentFragmentManager.popBackStack()
         }
 
