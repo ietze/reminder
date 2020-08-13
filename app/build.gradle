@@ -50,6 +50,9 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
 
+    implementation 'com.google.dagger:dagger:2.25.2'
+    kapt 'com.google.dagger:dagger-compiler:2.25.2'
+
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.google.android.material:material:1.2.0-rc01'
     implementation 'com.github.florent37:singledateandtimepicker:2.2.6'
